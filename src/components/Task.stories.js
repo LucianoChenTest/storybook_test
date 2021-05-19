@@ -9,12 +9,15 @@ const obj = {
 };
 export default obj;
 
-const getTemplate = () => (args) => <Task task={{ id: "123" }} {...args} />;
+const getTemplate = () => (args, k) => {
+  console.log({ args, k });
+  return <Task task={{ id: "123" }} {...args} />;
+};
 
 export const Default = getTemplate();
 Default.args = {
   task: {
-    id: "1",
+    id: "3",
     title: "Test Task1",
     state: "TASK_INBOX",
     updatedAt: new Date(2021, 0, 1, 9, 0),
