@@ -6,6 +6,7 @@ import './button.css';
  * Primary UI component for user interaction
  */
 export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
+  console.log(props.onClick)
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
@@ -39,12 +40,12 @@ Button.propTypes = {
   /**
    * Optional click handler
    */
-  onClick: PropTypes.func,
+  // onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   backgroundColor: null,
   primary: false,
+  // onClick: undefined,
   size: 'medium',
-  onClick: undefined,
 };

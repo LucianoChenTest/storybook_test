@@ -1,0 +1,101 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  DocsContainer,
+  ArgsTable,
+  Source,
+  Description,
+} from "@storybook/addon-docs/blocks";
+import Task2 from "./Task2";
+import { argTypes } from "./Task.stories";
+import dedent from "ts-dedent";
+
+<Meta
+  title="Task2"
+  component={Task2}
+  argTypes={argTypes}
+  parameters={{
+    docs: {
+      container: ({ children, context }) => (
+        <DocsContainer context={context}>
+          <div style={{ border: "5px solid red" }}>{children}</div>
+        </DocsContainer>
+      ),
+    },
+  }}
+/>
+
+# Button
+
+export const Template = (args) => {
+  console.log({ argTypes });
+  return <Task2 {...args} />;
+};
+
+<ArgsTable story="Primary" />
+
+<Description
+  markdown={dedent`
+  ## Custom description
+  Insert fancy markdown here.
+`}
+/>
+
+<Canvas>
+  <h2>Some here</h2>
+  <Story
+    name="Primary"
+    args={{
+      task: {
+        id: "3",
+        title: "Test Task1",
+        state: "TASK_INBOX",
+        updatedAt: new Date(2021, 0, 1, 9, 0),
+      },
+    }}
+    parameters={{
+      docs: {
+        source: {
+          type: "code",
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary"
+    args={{
+      task: {
+        id: "3",
+        title: "Test Task1",
+        state: "TASK_INBOX",
+        updatedAt: new Date(2021, 0, 1, 9, 0),
+      },
+    }}
+    parameters={{
+      docs: {
+        source: {
+          type: "code",
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Task2} />
+
+<Source
+  language="css"
+  code={dedent`
+     .container {
+       display: grid | inline-grid;
+     }
+     .large {
+       font-size : 100px;
+     }
+`}
+/>

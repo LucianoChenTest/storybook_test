@@ -5,12 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./store";
-
+import { Calendar } from "./calendar";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App a="1" />
-    </Provider> 
+      <>
+        <App a="1" />
+        <Calendar />
+      </>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

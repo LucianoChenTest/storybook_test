@@ -1,0 +1,21 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  Description,
+} from "@storybook/addon-docs/blocks";
+
+# Button
+
+export const Template = (args) => <div>123</div>;
+
+<Canvas>
+  <Story id="task--default" />
+  <Story id="task--pinned" />
+  <Story id="task--archived" />
+</Canvas>
+
+<Story name="task" id="task--default">
+  {Template.bind({})}
+</Story>
