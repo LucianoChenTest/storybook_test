@@ -35,7 +35,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "TOKEN=$(grep PROJECT_TOKEN .env | cut -d '=' -f 2-) && npx chromatic --project-token $TOKEN"
+    "chromatic": "TOKEN=$(grep PROJECT_TOKEN .env | cut -d '=' -f 2-) && npx chromatic --project-token $TOKEN",
+    "semantic-release": "semantic-release"
   },
   "eslintConfig": {
     "extends": [
