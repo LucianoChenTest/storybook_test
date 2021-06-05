@@ -1,0 +1,51 @@
+version: 2.1
+executors:
+  node-executor:
+    docker:
+      - image: circleci/node:12
+
+jobs:
+  prepare:
+    executor: node-executor
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-
+      - run:
+          name: Install dependencies
+          command: npm i
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - project
+  semantic-release:
+    executor: node-executor
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Update package.json version, Git tag, and CHANGELOG in release branch
+          command: npm run semantic-release || true
+
+workflows:
+  version: 2
+  prepare_publish:
+    jobs:
+      - prepare:
+          filters:
+            branches:
+              only:
+                - master
+      - semantic-release:
+          requires:
+            - prepare
+          filters:
+            branches:
+              only:
+                - master
