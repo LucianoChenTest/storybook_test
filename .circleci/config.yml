@@ -57,6 +57,6 @@ workflows:
             branches:
               only:
                 - master
-       - chromatic-deployment:
+      - chromatic-deployment:
           requires:
             - prepare
