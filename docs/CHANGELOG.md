@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/LucianoChenTest/storybook_test/compare/v1.0.3...v1.0.4) (2021-06-07)
+
+
+### Bug Fixes
+
+* **test:** test ([172b84c](https://github.com/LucianoChenTest/storybook_test/commit/172b84c67664e3a88f0854783eb27801fddd8b04))
+
 ## [1.0.3](https://github.com/LucianoChenTest/storybook_test/compare/v1.0.2...v1.0.3) (2021-06-07)
 
 
