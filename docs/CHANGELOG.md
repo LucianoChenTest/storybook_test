@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/LucianoChen/storybook_test/compare/v1.0.1...v1.0.2) (2021-06-07)
+
+
+### Bug Fixes
+
+* **ci:** deactivate github actions ([625f508](https://github.com/LucianoChen/storybook_test/commit/625f5088d422150874ff6745098756bf8bbdceb6))
+
 ## [1.0.1](https://github.com/LucianoChen/storybook_test/compare/v1.0.0...v1.0.1) (2021-06-07)
 
 
