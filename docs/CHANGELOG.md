@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/LucianoChen/storybook_test/compare/v1.0.0...v1.0.1) (2021-06-07)
+
+
+### Bug Fixes
+
+* **ci:** config ([49e9fa7](https://github.com/LucianoChen/storybook_test/commit/49e9fa7552f1ee18bfa5f3991960635f56ca8c34))
+* **ci:** config ([0ea55d3](https://github.com/LucianoChen/storybook_test/commit/0ea55d355a66c6d2b886b369d0b42d0c925ec8c1))
+
 # 1.0.0 (2021-06-05)
 
 
