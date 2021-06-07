@@ -37,9 +37,9 @@ const obj = {
   parameters: {
     docs: {
         page: mdx,
-        // description: {
-        //   component: 'Some component _markdown_',
-        // },
+        description: {
+          component: 'Some component _markdown_',
+        },
     },
 },
 };
