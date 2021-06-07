@@ -39,7 +39,7 @@ jobs:
           at: ~/
       - run:
           name: Runs the Chromatic CLI
-          command: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}
+          command: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --exit-zero-on-changes
 
 workflows:
   version: 2
