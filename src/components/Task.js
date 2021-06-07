@@ -25,6 +25,7 @@ export default function Task({
           placeholder="Input title"
         />
       </div>
+      test
       <div className="actions" onClick={(event) => event.stopPropagation()}>
         {state !== "TASK_ARCHIVED" && (
           // eslint-disable-next-line jsx-a11y/anchor-is-valid
