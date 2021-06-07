@@ -32,6 +32,14 @@ jobs:
       - run:
           name: Update package.json version, Git tag, and CHANGELOG in release branch
           command: npm run semantic-release || true
+  chromatic-deployment:
+    executor: node-executor
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Runs the Chromatic CLI
+          command: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}
 
 workflows:
   version: 2
@@ -49,3 +57,6 @@ workflows:
             branches:
               only:
                 - master
+       - chromatic-deployment:
+          requires:
+            - prepare
